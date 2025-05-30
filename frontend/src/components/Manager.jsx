@@ -26,7 +26,7 @@ const Manager = () => {
 
     const getPasswords = async () => {
         try {
-            let res = await fetch(`http://localhost:4000/${userId}`);
+            let res = await fetch(`https://password-manager-byqj.onrender.com/${userId}`);
             let data = await res.json();
             console.log(data)
             setPasswordArray(data || []);
@@ -36,7 +36,7 @@ const Manager = () => {
     };
 
     const savePass = async () => {
-        await fetch(`http://localhost:4000/${userId}`, {
+        await fetch(`https://password-manager-byqj.onrender.com/${userId}`, {
                     method: 'DELETE',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id : form.id}),
@@ -46,7 +46,7 @@ const Manager = () => {
             setPasswordArray([...passwordArray, newPass]);
 
             try {
-                await fetch(`http://localhost:4000/`, {
+                await fetch(`https://password-manager-byqj.onrender.com`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -67,7 +67,7 @@ const Manager = () => {
         if (confirm("Do you want to delete this password?")) {
             setPasswordArray(passwordArray.filter(item => item.id !== id));
             try {
-                await fetch(`http://localhost:4000/${userId}`, {
+                await fetch(`https://password-manager-byqj.onrender.com/${userId}`, {
                     method: 'DELETE',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ id }),

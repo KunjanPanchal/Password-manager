@@ -16,7 +16,7 @@ const Login = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://localhost:4000/login", form);
+      const res = await axios.post("https://password-manager-byqj.onrender.com/login", form);
        toast('Login successful', { position: "top-right", theme: "dark", transition: Bounce });
       localStorage.setItem("userId", res.data._id)
       localStorage.setItem("token", res.data.token);
