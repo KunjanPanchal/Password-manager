@@ -8,14 +8,13 @@ import { BrowserRouter, Routes, Route,HashRouter } from 'react-router-dom';
 function App() {
   return (
     <>
-      <HashRouter>
         <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/home" element={<Manager/>} />
         </Routes>
-      </HashRouter>
+      
     </>
   )
 }
