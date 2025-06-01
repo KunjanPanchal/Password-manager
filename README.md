@@ -4,7 +4,7 @@ A full-stack Password Manager application built using the **MERN** stack and **T
 
 ## 🚀 Live Demo
 
-👉 [View Live App](https://password-manager-1-wngb.onrender.com)
+👉 [View Live App](https://password-manager-pi-one.vercel.app/)
 
 ---
 
