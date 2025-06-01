@@ -8,7 +8,7 @@ import { BrowserRouter, Routes, Route,HashRouter } from 'react-router-dom';
 function App() {
   return (
     <>
-        <Routes basename="Password-manager">
+        <Routes>
           <Route path="/" element={<Landing />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
